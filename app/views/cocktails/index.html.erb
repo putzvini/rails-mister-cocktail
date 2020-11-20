@@ -1,0 +1,18 @@
+<section class="hero image-as-background" style="background-image: url('https://wallpapercave.com/wp/wp1887495.jpg');">
+  <div class="hero-container">
+    <p class="animate fadeInLeft delay-400">Award winning test website</p>
+    <h1 class="hero-title animate fadeInLeft delay-600">Cocktails and Dreams</h1>
+    <%= link_to "+ cocktail", new_cocktail_path, class: "hero-button animate fadeInLeft delay-800", title: "Click to add a cocktail" %>
+  </div>
+</section>
+<div class="container pt-5">
+  <div class="cards">
+    <% @cocktails.each do |cocktail| %>
+      <div class="card-category d-flex flex-column" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://picsum.photos/300/200/)">
+        <%= cocktail.name %>
+        <%= link_to "", cocktail_path(cocktail), class: "fas fa-plus-circle" %>
+      </div>   
+    <% end %>
+  </div>
+</div>
+
